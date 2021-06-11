@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Major+Mono+Display">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poiret+One">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <section class="contact-from pt-5">
+    <div class="container">
+
+      <div class="row mt-5">
+        <div class="col-md-7 mx-auto">
+          <div id="success" class="alert alert-success alert-dismissible fade show">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Success!</strong> You have successfully registered.
+          </div>
+          
+          <div id="unsubscribesuccess" class="alert alert-success alert-dismissible fade show">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Success!</strong> You have successfully unsubscribed.
+          </div>
+
+          <div class="form-wrapper">
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="text-center">Registration form</h2>
+              </div>
+            </div>
+            <form _lpchecked="1" method="post" action="sentmail.php">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+
+                    <!--<p style="text-align: center;">Select one or multiple options</p>-->
+                    <p class="multi_select" style="text-align: center;">Select one or multiple options</p>
+
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group multiselect">
+                    <select name="xrays[]" id="xrays" multiple="multiple">
+                      <option value="Strong"
+                        title="NOAA R-SCALE &#013; GOES 0.1-0.8nm X-ray flux &ge; 10e-4  and &lt; 10e-3 (X1)">Strong
+                        (R3)</option>
+                      <option value="Severe"
+                        title="NOAA R-SCALE &#013; GOES 0.1-0.8nm X-ray flux &ge; 10e-3  and &lt; 2 x10e-3 (X10)">Severe
+                        (R4)</option>
+                      <option value="Extreme" title="NOAA R-SCALE &#013; GOES 0.1-0.8nm X-ray flux &ge; 2 x10e-3 (X20)">
+                        Extreme (R5)</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group multiselect">
+                    <select name="protons[]" id="protons" multiple="multiple" title="NOAA S-SCALE">
+                      <option value="Strong"
+                        title="NOAA S-SCALE &#013; GOES &ge; 10MeV particle flux &ge; 10e3 and &lt; 10e4">Strong (S3)
+                      </option>
+                      <option value="Severe"
+                        title="NOAA S-SCALE &#013;GOES &ge; 10MeV particle flux &ge; 10e4 and &lt; 10e5">Severe (S4)
+                      </option>
+                      <option value="Extreme" title="NOAA S-SCALE &#013;GOES &ge; 10MeV particle flux &ge; 10e5">Extreme
+                        (S5)</option>
+                    </select>
+                  </div>
+
+                </div>
+                <div class="col-md-12">
+                  <div style="text-align:center" class="form-group">
+
+                    <!--<p style="text-align: center;">Geomagnetic Activity index &Delta;H</p>-->
+                    <span style="font-weight:bold;" title="Maximum range in geomagnetic horizontal component &#13;
+during the last hour. This parameter gives an indication &#13;
+of the overall geomagnetic disturbance above the &#13;specified location.">Geomagnetic Activity index &Delta;H</span>
+
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group multiselect">
+                    <select name="NyÅlesund[]" id="NyÅlesund" multiple="multiple">
+                      <option value="Strong" title="Ground disturbance &#8805; 801 nT and &lt; 1321 nT">Strong</option>
+                      <option value="Severe" title="Ground disturbance &#8805; 1321 nT and &lt; 2001 nT">Severe</option>
+                      <option value="Extreme" title="Ground disturbance &#8805; 2001 nT">Extreme</option>
+                    </select>
+                  </div>
+
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group multiselect">
+                    <select name="Tromsø[]" id="Tromsø" multiple="multiple">
+                      <option value="Strong" title="Ground disturbance &#8805; 801 nT and &lt; 1321 nT">Strong</option>
+                      <option value="Severe" title="Ground disturbance &#8805; 1321 nT and &lt; 2001 nT">Severe</option>
+                      <option value="Extreme" title="Ground disturbance &#8805; 2001 nT">Extreme</option>
+                    </select>
+                  </div>
+
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group multiselect">
+                    <select name="Dombås[]" id="Dombås" multiple="multiple">
+                      <option value="Strong" title="Ground disturbance &#8805; 300 nT and &lt; 495 nT">Strong</option>
+                      <option value="Severe" title="Ground disturbance &#8805; 495 nT and &lt; 750 nT">Severe</option>
+                      <option value="Extreme" title="Ground disturbance &#8805; 750 nT">Extreme</option>
+                    </select>
+                  </div>
+
+                </div>
+                <div class="col-md-12">
+                  <div style="text-align:center" class="form-group">
+
+                    <!--<p style="text-align: center;">GIC Proxy dH/dt</p>-->
+                    <span style="font-weight: bold;" title="Rate of change in geomagnetic horizontal component. &#13;
+The parameter is an indicator of the variability in the &#13;
+magnetic field, which gives rise to Geomagnetically &#13;
+Induced Currents (GIC) in the ground and consequently &#13;
+their return currents in e.g. power grids."> GIC Proxy dH/dt </span>
+
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group multiselect">
+                    <select name="NyÅlesund_dh[]" id="NyÅlesund_dh" multiple="multiple">
+                      <option value="Severe" title="Ground disturbance &#8805; 20 nT/s (experimental)">Severe</option>
+                    </select>
+                  </div>
+
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group multiselect">
+                    <select name="Tromsø_dh[]" id="Tromsø_dh" multiple="multiple">
+                      <option value="Severe" title="Ground disturbance &#8805; 20 nT/s (experimental)">Severe</option>
+                    </select>
+                  </div>
+
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group multiselect">
+                    <select name="Dombås_dh[]" id="Dombås_dh" multiple="multiple">
+                      <option value="Severe" title="Ground disturbance &#8805; 20 nT/s (experimental)">Severe</option>
+                    </select>
+                  </div>
+
+
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Enter email address" name="email" id="email">
+                    <span style="color: red;display:none" id="unsubscribeError"></span>
+                  </div>
+                </div>
+
+              </div>
+              <div class="text-center">
+                <button type="submit" name="submit" class="mt-3 btn btn-primary">Subscribe</button>
+                <button type="button" title="Unsubscribe from all options" class="mt-3 btn btn-primary" style="background-color: red" name="unsubscribe" id="unsubscribeBtn">Unsubscribe</button>
+
+                <!-- <a href="unsubscribe.html" style="background-color: red" class="mt-3 btn btn-primary">Unsubscrbe</a> -->
+              </div>
+            </form>
+            <form method="post" action="unsubscribe.php" style="display: none;" id="unsubscribeForm">
+              <input type="email" name="email" id="unsubscribeFormInput">
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.min.js"></script>
+  <script src="main.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#xrays').multiselect({
+        buttonWidth: '100%',
+        includeSelectAllOption: true,
+        nonSelectedText: 'Radio Blackouts'
+      });
+      $('#protons').multiselect({
+        buttonWidth: '100%',
+        includeSelectAllOption: true,
+        nonSelectedText: 'Radiation Storms'
+      });
+      $('#NyÅlesund').multiselect({
+        buttonWidth: '100%',
+        includeSelectAllOption: true,
+        nonSelectedText: 'Ny-Ålesund'
+      });
+      $('#Tromsø').multiselect({
+        buttonWidth: '100%',
+        includeSelectAllOption: true,
+        nonSelectedText: 'Tromsø'
+      });
+      $('#Dombås').multiselect({
+        buttonWidth: '100%',
+        includeSelectAllOption: true,
+        nonSelectedText: 'Dombås'
+      });
+      $('#NyÅlesund_dh').multiselect({
+        buttonWidth: '100%',
+        includeSelectAllOption: true,
+        nonSelectedText: 'Ny-Ålesund'
+      });
+      $('#Tromsø_dh').multiselect({
+        buttonWidth: '100%',
+        includeSelectAllOption: true,
+        nonSelectedText: 'Tromsø'
+      });
+      $('#Dombås_dh').multiselect({
+        buttonWidth: '100%',
+        includeSelectAllOption: true,
+        nonSelectedText: 'Dombås'
+      });
+
+      //$("form").submit(function(){
+      //var text = $('.multiselect select').val();
+      //$('.multiselect select').each(function() {
+      //var text = $(this).val();
+      //if(text == ""){$('.multi_select').html("<span class='error'>Select at least one option</span>");event.preventDefault();}
+      //else{$('.multi_select').html("Select one or multiple options");}
+      //if(text == ""){$(this).parent().append("<label class='error'>Select at least one option</label>");event.preventDefault();}
+      //});
+      //});
+
+      //$("form").submit(function(){
+      //var text = $('.multiselect select').val();
+      //if(text == ""){$('.multi_select').html("<span class='error'>Select at least one option</span>");event.preventDefault();}
+      //else{$('.multi_select').html("Select one or multiple options");}
+      //});
+
+      $("form").submit(function () {
+        var $nonempty = $('.multiselect select').filter(function () {
+          return this.value != ''
+        });
+        if ($nonempty.length == 0) {
+          $('.multi_select').html("<span class='error'>Select at least one option</span>"); event.preventDefault();
+        }
+        else { $('.multi_select').html("Select one or multiple options"); }
+      });
+
+    });
+
+    const unsubscribeForm = document.getElementById('unsubscribeForm')
+    const emailInput = document.getElementById('email')
+    const unsubscribeFormInput = document.getElementById('unsubscribeFormInput')
+    const unsubscribeError = document.getElementById('unsubscribeError')
+
+
+    document.getElementById('unsubscribeBtn').onclick = function unsubscribe() {
+      if (emailInput.value.length <= 0) {
+        unsubscribeError.innerText = 'Please enter your email address'
+        unsubscribeError.style.display = 'block'
+        return
+      }
+
+      unsubscribeFormInput.value = emailInput.value
+      unsubscribeForm.submit()
+
+    }
+
+    // function unsubscribe() {
+      // if (emailInput.value.length <= 0) {
+      //   unsubscribeError.innerText = 'You need to provide your email'
+      //   unsubscribeError.style.display = 'block'
+      //   return
+      // }
+
+      // unsubscribeFormInput.value = emailInput.value
+      // unsubscribeForm.submit()
+
+
+      // const formData = new FormData()
+      // formData.append('email', emailInput.value)
+
+      // const unsubReq = new XMLHttpRequest()
+      // unsubReq.open('POST', 'sentmail.php')
+      // unsubReq.send(formData)
+
+    // }
+  </script>
+</body>
+
+</html>
